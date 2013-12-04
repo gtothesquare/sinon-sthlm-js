@@ -1,0 +1,512 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Sinon.js</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Sinon.js </h1>
+		<p>Geries Handal <a href="twitter.com/gtothesquare">@gtothesquare</a></p>
+	</header>
+    <section class="slide cover" id="welcome"><div>
+        <h2>sthlm.js</h2>
+        <p>Welcome to meetup #13 @HiQ </p>
+        <ol>
+            <li>Fakes, Stubs and Spies with Sinon.js by Geries Handal </li>
+            <li>Interactive programming with JavaScript by Mikael Kindborg </li>
+        </ol>
+        <!-- http://newevolutiondesigns.com/images/freebies/retro-wallpaper-33.jpg -->
+        <style>
+            #welcome h2 {
+                margin:60px 0 0;
+                color:#fff;
+                text-align:center;
+                font-size:100px;
+            }
+            #welcome p {
+                margin:10px 0 0;
+                text-align:center;
+                color:#fff;
+
+                font-size:40px;
+            }
+            #welcome ol {
+                margin: 20px 0 0;
+                color:#fff;
+            }
+        </style>
+    </div></section>
+	<section class="slide cover" id="Cover"><div>
+		<h2>Sinon.js</h2>
+        <p>Fakes, Spies and Stubs</p>
+		<img src="pictures/lego-retro.jpg" alt="" width="1200">
+        <!-- source image http://newevolutiondesigns.com/50-hd-retro-wallpapers -->
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:-90px 0 0;
+				color:#000;
+				text-align:center;
+				font-size:100px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#000;
+				font-style:italic;
+				font-size:40px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+    <section class="slide cover" id="videoplaza"><div>
+        <img src="pictures/VP%20Vertical%20Payoff%20RGB.png" width="600"/>
+        <style>
+            #videoplaza {
+                background-color: #ffffff;
+            }
+            #videoplaza img {
+                margin-left: 200px;
+            }
+        </style>
+    </div></section>
+    <section class="slide" id="testDoubles"><div>
+        <h2>Test Doubles:</h2>
+        <p>Dummies, <em>Fakes, Spies, Stubs </em>and Mocks</p>
+        <style>
+            #testDoubles em{
+                color:#366097;
+               font-weight: 700;
+                font-size: 1.3em;
+
+            }
+        </style>
+    </div></section>
+    <section class="slide cover" id="stunt"><div>
+
+        <img src="pictures/The_Matrix_0057.jpg" width="1600"/>
+        <style>
+            #stunt h2 {
+                color:#AAAAAA;
+                font-size: 80px;
+
+            }
+        </style>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Test Double</h2>
+        <figure>
+            <blockquote>
+                <p>is a generic term for any case where you replace a production object for testing purposes</p>
+            </blockquote>
+        </figure>
+        <p class="note">source: http://www.martinfowler.com/bliki/TestDouble.html</p>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Test Double</h2>
+        <figure>
+            <blockquote>
+                <p>Use them when original implementations are awkward to use or when we need to isolate an interface from its dependencies.</p>
+            </blockquote>
+
+        </figure>
+        <p class="note">source: http://www.martinfowler.com/bliki/TestDouble.html</p>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Test Double</h2>
+        <figure>
+            <blockquote>
+                <p> We are focusing on one element of the software at a time -hence the common term unit testing.
+                    But the problem is that to make a single unit work, you often need other units</p>
+            </blockquote>
+
+        </figure>
+        <p class="note">source: http://martinfowler.com/articles/mocksArentStubs.html</p>
+    </div></section>
+
+
+    <section class="slide cover" id="fast"><div>
+        <h2>Harder, Better, Faster, Stronger</h2>
+        <img src="pictures/fastfuriousStunt.jpg" width="1400">
+        <!--source http://wot.motortrend.com/motor-trend-staff-reviews-fast-and-furious-6-in-six-second-vine-videos-373337.html/fast-and-furious-6-tank-stunt-promo/ -->
+    </div></section>
+    <section class="slide cover" id="Dummy"><div>
+        <h2>Dummies</h2>
+        <img src="pictures/dummy.jpg" width="1600" alt="">
+        <style>
+            #Dummy img {
+                -webkit-filter: blur(2px);
+                filter: blur(2px);
+            }
+            #Dummy h2 {
+                color:#FFF;
+                font-size: 80px;
+
+            }
+        </style>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Dummy</h2>
+        <figure>
+            <blockquote>
+                <p>objects are passed around but never actually used. Usually they are just used to fill parameter lists</p>
+            </blockquote>
+
+        </figure>
+        <p class="note">source: http://www.martinfowler.com/bliki/TestDouble.html</p>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Dummy</h2>
+		<pre>
+        <code>ok(user.createUser(</code>
+        <code>  {name:'some dude', address:'north pole'})</code>
+        <code>);<mark class="comment">//end ok</mark></code>
+        </pre>
+    </div></section>
+
+    <section class="slide cover" id="Fakes"><div>
+        <h2>Fakes</h2>
+        <img src="pictures/driods.jpg" width="1000" alt="">
+        <style>
+            #Fakes img {
+
+            }
+            #Fakes h2 {
+                color:#FFF;
+                font-size: 80px;
+
+            }
+        </style>
+        <!-- source: http://www.taringa.net/posts/imagenes/8699138/Jugetes-de-star-wars-en-situaciones-frikis.html -->
+    </div></section>
+
+
+
+    <!-- Fake timers -->
+
+    <section class="slide"><div>
+        <h2>Fake</h2>
+        <figure>
+            <blockquote>
+                <p>objects actually have working implementations, but usually take some shortcut which makes them not suitable for production</p>
+            </blockquote>
+        </figure>
+        <p class="note">source: http://www.martinfowler.com/bliki/TestDouble.html</p>
+
+    </div></section>
+    <section class="slide"><div>
+        <h2>Timers</h2>
+        <blockquote class="twitter-tweet" lang="en"><p>I don&#39;t always bend time and space in unit tests, but when I do, I use buster.js + sinon.js <a href="http://t.co/m1H6e6vo">http://t.co/m1H6e6vo</a></p>&mdash; Brian Cavalier (@briancavalier) <a href="https://twitter.com/briancavalier/statuses/225585750387863554">July 18, 2012</a></blockquote>
+
+
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>setup and teardown</h2>
+		<pre>
+            <code>setup: function() {</code>
+            <code>    <mark class="comment">// we bend time, space and your minds in a breeze</mark> </code>
+            <code>    this.clock = sinon.useFakeTimers();</code>
+            <code>},                                     </code>
+            <code>teardown: function(){                  </code>
+            <code>    <mark class="comment">// we restore the timers back reality</mark></code>
+            <code>    this.clock.restore();</code>
+            <code>}                        </code>
+        </pre>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Unit Test</h2>
+		<pre>
+         <code>asyncTest('should trigger in right away', function(){</code>
+         <code>    setTimeout(function(){</code>
+         <code>       start();</code>
+         <code>       ok(true);</code>
+         <code>       console.log('Timeout triggered');</code>
+         <code>    },4000);</code>
+         <code>    <mark>this.clock.tick(5000);</mark></code>
+         <code>});</code>
+        </pre>
+    </div></section>
+    <section class="slide shout">
+        <div>
+            <h2><a href="tests/timers_test.html" target="_blank">Timers Demo</a></h2>
+            <p class="note">libs: qUnit.js and sinon.js</p>
+        </div>
+    </section>
+
+
+    <!-- fake servers -->
+
+    <section class="slide">
+        <div>
+            <h2>Fake XHR and server</h2>
+            <pre>
+                <code>this.server = sinon.fakeServer.create();</code>
+                <code>this.server.autoRespond = true;</code>
+                <code><mark>this.server.autoRespondAfter = 10000;</mark></code>
+                <code>this.server.respondWith(<mark class="important">new RegExp('.')</mark>,</code>
+                <code> function (xhr, id) {</code>
+                <code>  xhr.respond(200,{'Content-Type':'text/xml;charset=UTF-8'},</code>
+                <code>   '&lt;VAST version="2.0"&gt;&lt;/VAST&gt;');</code>
+                <code> }</code>
+                <code>);<mark class="comment">//end respondWith</mark></code>
+            </pre>
+        </div>
+    </section>
+
+
+    <section class="slide">
+        <div>
+            <h2>teardown:</h2>
+            <pre>
+            <code>this.server.restore();</code>
+            </pre>
+        </div>
+    </section>
+
+
+    <!-- Spying -->
+
+    <section class="slide cover" id="spies"><div>
+        <h2>Spies</h2>
+        <img src="pictures/tinker-tailor-header.jpg" width="1000" alt="">
+        <style>
+            #spies img {
+
+            }
+            #spies h2 {
+                color:#fff;
+                font-size: 80px;
+
+            }
+        </style>
+        <!-- source: http://www.filmschoolrejects.com/news/los-angeles-do-some-espionage-and-we-may-send-you-to-the-tinker-tailor-soldier-spy-premiere.php-->
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Spies</h2>
+        <figure>
+            <blockquote>
+                <p>are stubs that also record some information based on how they were called.
+                    One form of this might be an email service that records how many messages it was sent.</p>
+            </blockquote>
+        </figure>
+        <p class="note">source: http://www.martinfowler.com/bliki/TestDouble.html</p>
+
+    </div></section>
+    <section class="slide"><div>
+        <h2>Stubs</h2>
+        <figure>
+            <blockquote>
+                <p>provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test</p>
+            </blockquote>
+        </figure>
+        <p class="note">source: http://www.martinfowler.com/bliki/TestDouble.html</p>
+
+    </div></section>
+    <section class="slide"><div>
+        <h2>Spies</h2>
+        <ul>
+            <li>have a rich interface to inspect objects</li>
+            <li>useful to test callbacks and how functions are used throughout the system</li>
+            <li>e.g. perfect for checking if console.log is used</li>
+        </ul>
+
+    </div></section>
+
+
+    <section class="slide">
+        <div>
+            <h2>Spy API</h2>
+            <p>notCalled,calledOnce, calledWith, calledAfter, calledBefore, threw, returned, callCount, etc</p>
+            <p class="note">more here http://sinonjs.org/docs/#stubs</p>
+        </div>
+    </section>
+
+    <section class="slide shout">
+        <div>
+            <h2><a href="tests/animation.html" target="_blank">Animation Demo</a></h2>
+            <p class="note">lib: jQuery 1.10</p>
+        </div>
+
+    </section>
+
+    <section class="slide shout">
+        <div>
+            <h2>How?</h2>
+        </div>
+    </section>
+
+
+    <section class="slide">
+        <div>
+            <h2>Test Setup</h2>
+            <pre>
+                <code>setup: function() {</code>
+                <code>  <mark class="comment">//we reset position of pikachu</mark></code>
+                <code>  $('#pikachu').css('left','150px');</code>
+                <code>  sinon.clock = sinon.useFakeTimers();</code>
+                <code>  <mark class="comment">// spy on stop()</mark></code>
+                <code>  <mark>sinon.spy(pikachu, 'stop');</mark></code>
+                <code>},</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Test Teardown:</h2>
+            <pre>
+                <code>teardown: function(){</code>
+                <code>  <mark class="comment">// we restore the timers back reality</mark></code>
+                <code>  sinon.clock.restore();</code>
+                <code>  <mark class="comment">// in a very stealthy way we restore stop</mark></code>
+                <code>  <mark>pikachu.stop.restore();</mark></code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>The Test</h2>
+            <pre>
+                <code>asyncTest('should call stop', function(){</code>
+                <code>  pikachu.run();</code>
+                <code>  sinon.clock.tick(4000);</code>
+                <code>  start();</code>
+                <code>  <mark class="comment">//verified that stop was called once</mark></code>
+                <code>  <mark>ok(pikachu.stop.calledOnce);</mark></code>
+                <code>});</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide shout">
+        <div>
+            <h2><a href="tests/animation_test.html" target="_blank">Spies Demo</a></h2>
+            <p class="note">libs: jQuery, qUnit.js and sinon.js</p>
+        </div>
+
+    </section>
+
+
+    <!-- Stubbing -->
+
+    <section class="slide cover" id="stubs"><div>
+        <h2>Stubs</h2>
+        <img src="pictures/oldticketstub.JPG" width="1100" alt="">
+        <style>
+            #spies img {
+
+            }
+            #spies h2 {
+                color:#fff;
+                font-size: 80px;
+
+            }
+        </style>
+        <!-- source: http://1.bp.blogspot.com/_WJjc0N1hIH4/S9ohkRZnDBI/AAAAAAAAK6M/0L-nWy8qsTs/s1600/old+ticket+stub.JPG -->
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Stubs</h2>
+        <figure>
+            <blockquote>
+                <p>provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test</p>
+            </blockquote>
+        </figure>
+        <p class="note">source: http://www.martinfowler.com/bliki/TestDouble.html</p>
+
+    </div></section>
+    <section class="slide"><div>
+        <h2>Behaviour Verification</h2>
+        <ul>
+            <li>To determine if a unit or component is behaving as specified rather that checking for correct output.</li>
+            <li>Replace a component that the System Under Test depends on.</li>
+            <li>e.g. Testing realtime apps without server</li>
+        </ul>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Stubs</h2>
+		<pre>
+            <code>setup: function() {</code>
+            <code>  <mark>sinon.stub($, "ajax").yieldsTo("success", song);</mark></code>
+            <code>},</code>
+            <code>teardown: function(){</code>
+            <code>  <mark>$.ajax.restore();</mark></code>
+            <code>}</code>
+        </pre>
+    </div></section>
+    <section class="slide"><div>
+        <h2>The Test</h2>
+		<pre>
+            <code>hypem.ajaxCall(function(data){</code>
+            <code>  start();</code>
+            <code>  <mark>equal(data, song);</mark></code>
+            <code>}, function(error){</code>
+            <code>  start();</code>
+            <code>  <mark class="important">ok(false, "failed! it should be yield to success");</mark></code>
+            <code>});</code>
+        </pre>
+    </div></section>
+    <section class="slide shout"><div>
+        <h2><a href="tests/hypem.html" target="_blank">Stubs Demo</a></h2>
+        <p class="note">libs: jQuery, qUnit.js and sinon.js</p>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>one slide on Mocks</h2>
+        <figure>
+            <blockquote>
+                <p>are pre-programmed with expectations which form a specification of the calls they are expected to receive. They can throw an exception if they receive a call they don't expect and are checked during verification to ensure they got all the calls they were expecting</p>
+            </blockquote>
+        </figure>
+        <p class="note">source: http://www.martinfowler.com/bliki/TestDouble.html</p>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Gotchas</h2>
+        <ul>
+            <li>may need window.requestAnimationFrame = null (for faking timers jQuery 2 animate)</li>
+            <li>for xhr timeout use a fake server</li>
+            <li>withCredentials not supported, but fixed in https://github.com/cjohansen/Sinon.JS/pull/354</li>
+        </ul>
+    </div></section>
+
+    <section class="slide shout"><div>
+        <h2>Thanks :) Questions?</h2>
+
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Image sources</h2>
+        <ul>
+            <li>lego image: http://newevolutiondesigns.com/50-hd-retro-wallpapers</li>
+            <li>matrix: http://radumoviephoto.wordpress.com/2012/10/19/the-matrix-converting-human-beings-into-batteries-since-the-future/ </li>
+            <li>fast n furious: http://wot.motortrend.com/motor-trend-staff-reviews-fast-and-furious-6-in-six-second-vine-videos-373337.html/fast-and-furious-6-tank-stunt-promo/</li>
+            <li>dummy: http://autoetecnica.band.uol.com.br/site/wp-content/uploads/2013/11/cg_test1_big.jpg</li>
+            <li>c3po: http://www.taringa.net/posts/imagenes/8699138/Jugetes-de-star-wars-en-situaciones-frikis.html</li>
+            <li>tinker tailor: http://www.filmschoolrejects.com/news/los-angeles-do-some-espionage-and-we-may-send-you-to-the-tinker-tailor-soldier-spy-premiere.php</li>
+            <li>ticket stub: http://1.bp.blogspot.com/_WJjc0N1hIH4/S9ohkRZnDBI/AAAAAAAAK6M/0L-nWy8qsTs/s1600/old+ticket+stub.JPG</li>
+            <li>running pikachu: http://tf2.gamebanana.com/sprays/68211</li>
+            <li>standing pikachu: http://imgur.com/gallery/88Oujwu</li>
+        </ul>
+
+    </div></section>
+
+	<script src="shower/shower.min.js"></script>
+
+	<!-- by Geries Handal -->
+
+</body>
+</html>
